@@ -458,7 +458,7 @@ JOIN orders_status os
  
 
   * **Compound Join Condition**  
-  * **Composite KEY** Is a **primary key** that contains more than one column   
+  * ***Composite KEY** Is a **primary key** that contains more than one column   
   * Both columns together hold a unique compound that we can use as primary key  
     * In *order\_items* table, order\_id and product\_id together create a composite key.  
   * How to join a table that has a composite primary key with another table?  
