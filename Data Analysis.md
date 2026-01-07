@@ -36,21 +36,21 @@
 
 
 
-		**SELECT**
+**SELECT**
 	
-		**FROM**
+**FROM**
 	
-		**WHERE**
+**WHERE**
 	
-		**GROUP BY**
+**GROUP BY**
 	
-		**HAVING**
+**HAVING**
 	
-		**ORDER BY**
+**ORDER BY**
 	
-		**LIMIT**
+**LIMIT**
 
-  ## **SELECT** 
+## **SELECT** 
 
 ### **Selecting all columns**
 
@@ -165,13 +165,13 @@ WHERE state = 'VA'
 ```
 
 
-We use IN
+We can use IN to make our job easier:
 ```sql
 SELECT *
 FROM table_name
 WHERE state IN ('VA', 'GA', 'FL');
 ```
-Or we can use NOT IN for negation
+Or we can use NOT IN for negation:
 
 ```sql
 SELECT *
@@ -184,42 +184,32 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
 
   ### **BETWEEN** (compare an attribute with a range of values)
 
+The following is not a good approach:
+```sql
+SELECT * 
+FROM table_name 
+WHERE points >= 1000 AND points <= 3000;
+```
 
-  **SELECT**  \*                				
+Better to use BETWEEN
+		
+```sql
+SELECT * 
+FROM table_name 
+WHERE BETWEEN 1000 AND 3000;
+```
 
-  **FROM**  table\_name 			                        → Not a good approach
-
-  **WHERE**  points \>= 1000  **AND**  points \<= 3000
-
-
-  
-
-  			Better to use BETWEEN
-
-  			
-
-  **SELECT**  \*                				
-
-  **FROM**  table\_name 			                        
-
-  **WHERE**  points **BETWEEN** 1000 **AND** 3000
-
-
-  
-
-  ### **LIKE** (retrieve rows that matches specific string patterns)
+### **LIKE** (retrieve rows that matches specific string patterns)
 
   	 
 
-  For example, we are interested in all customers whose family name starts with B.
+For example, we are interested in all customers whose family name starts with B.
 
-  	
-
-  **SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **WHERE** last\_name **LIKE** “b%”
+```sql
+SELECT  * 
+FROM  table_name
+WHERE last_name LIKE “b%”;
+```
 
 
 * **%** means any number of characters   
@@ -239,19 +229,20 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
       
 
 
-      ### **REGEXP** (better option than LIKE)
+### **REGEXP** (better option than LIKE)
 
       	
 
-      We are interested in all customers whose family name has the word “field”.
+We are interested in all customers whose family name has the word “field”.
 
       
 
-      **SELECT**  \* 
 
-      **FROM**  table\_name
-
-      **WHERE** last\_name **REGEXP** ‘field’
+```sql
+SELECT  * 
+FROM  table_name
+WHERE last_name REGEXP ‘field’;
+```
 
       
 
@@ -268,57 +259,55 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
 
   
 
-  ### **IS NULL (**missing attribute**)**
+### **IS NULL (**missing attribute**)**
 
      
-  We want to email to the customers who their phone number is missing to ask  them give a phone number   
+We want to email to the customers who their phone number is missing to ask  them give a phone number   
+```sql    
+SELECT  * 
+FROM  table_name
+WHERE phone IS NULL
+```
     
-  **SELECT**  \*   
-  **FROM**  table\_name  
-  **WHERE** phone **IS NULL**  
-    
-  Or we want all customers that they they have phone number  
-    
-  **SELECT**  \*   
-  **FROM**  table\_name  
-  **WHERE** phone **IS NOT NULL**
+Or we want all customers that they they have phone number  
+```sql
+SELECT  * 
+FROM  table_name
+WHERE phone IS NOT NULL
+```
 
 
-  	
+## **ORDER BY**
 
-  ## **ORDER BY**
-
-  How to sort data in SQL queries 
+How to sort data in SQL queries 
 
 
   **Order by family name**
-
-    
-  **SELECT**  \*   
-  **FROM**  table\_name  
-  **ORDER BY** family\_name  
+```sql
+SELECT  * 
+FROM  table_name
+ORDER BY family_name
+```
     
 * You can use **DESC** to do it in reversed order
 
 
-  
-
   **First order by state and the order by family\_name**
 
-    
-  **SELECT**  \*   
-  **FROM**  table\_name  
-  **ORDER BY** state, family\_name  
+```sql
+SELECT  * 
+FROM  table_name
+ORDER BY state, family_name
+```    
+
     
 * Can also add **DESC** to any of them
 
-
-  **SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **ORDER BY** state **DESC**, family\_name **DESC**
-
+```sql
+SELECT  * 
+FROM  table_name
+ORDER BY state DESC, family_name DESC
+```
 
   
 
@@ -329,29 +318,19 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
 
 * Top 3 rows
 
-
-  **SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **LIMIT** 3
+```sql
+SELECT  * 
+FROM  table_name
+LIMIT 3
+```
 
 
 * Ignore first 6 customers and give the next 3 customers being 7,8,9
-
-
-  **SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **LIMIT** 6, 3
-
-
-  
-
-
-  
-
+```sql
+SELECT  * 
+FROM  table_name
+LIMIT 6, 3
+```
 
   ## **JOIN**
 
@@ -377,7 +356,8 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
     
 
 * We want orders table but with full customers information rather than just their ID
-
+```sql
+```
   **SELECT**  \* 
 
   **FROM**  orders
@@ -390,7 +370,8 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
   * If we want to select the primary key column, we have to give a table name before(here can be either **orders.customer\_id** or **customers.customer\_id)**
 
     
-
+```sql
+```
     **SELECT**  order\_id, **orders.customer\_id**, first\_name, last\_name 
 
     **FROM**  orders
@@ -404,7 +385,8 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
   * Giving table names an alias
 
     
-
+```sql
+```
     **SELECT**  order\_id, o.customer\_id, first\_name, last\_name 
 
     **FROM**  orders **o**
@@ -429,7 +411,8 @@ WHERE state NOT IN ('VA', 'GA', 'FL');
 
 * Match product\_id in both tables across different databases
 
-
+```sql
+```
   **SELECT**  \*
 
   **FROM**  order\_items oi
