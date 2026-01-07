@@ -425,14 +425,14 @@ JOIN sql_inventory.products p
 
     
 
-**customers table**
+**customers Table**
 
 <img width="468" height="129" alt="Screenshot 2026-01-07 at 10 53 37 PM" src="https://github.com/user-attachments/assets/71f7a505-a84a-45dd-98f1-b950c1bbfc97" />
 
 
     
 
-**orders  table**
+**orders  Table**
 
 <img width="474" height="129" alt="Screenshot 2026-01-07 at 10 54 03 PM" src="https://github.com/user-attachments/assets/aefaa27d-c252-49b8-b2f6-42b9dde97645" />
 
@@ -441,7 +441,7 @@ JOIN sql_inventory.products p
 
     
 
-**Order\_status**
+**Order_status Table**
 
 <img width="227" height="74" alt="Screenshot 2026-01-07 at 10 54 25 PM" src="https://github.com/user-attachments/assets/621e9b87-ba40-4f11-8aa3-d993e44683d7" />
 
@@ -497,31 +497,24 @@ JOIN order_item_notes oin
 
   					
 
-**  				                              Employees table
-**
+		**Employees table**
+
 <img width="487" height="343" alt="Screenshot 2026-01-07 at 11 00 22 PM" src="https://github.com/user-attachments/assets/30033c59-a403-47af-bd1e-743d55d3509e" />
 
+```sql
+SELECT  
+e.first_name, 
+e.last_name, 
+m.first_name AS manager
+FROM  employees e
+JOIN employees m
+       ON e.reports_to = m.employee_id
+```
 
-      
+Running the code above would result in a table looking like following:
 
-      **SELECT**  
 
-      e.first\_name, 
-
-      e.last\_name, 
-
-      m.first\_name **AS** manager
-
-      **FROM**  employees e
-
-      **JOIN** employees m
-
-             **ON** e.reports\_to \= m.employee\_id
-
-      
-
-                                                                     ![][image12]
-
+<img width="185" height="315" alt="Screenshot 2026-01-07 at 11 03 19 PM" src="https://github.com/user-attachments/assets/b41b3a58-a759-4586-8ccb-8c914e649229" />
 
     
 
