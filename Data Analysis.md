@@ -97,6 +97,7 @@ WHERE condition
 SELECT column_name1, column_name2
 FROM table_name
 ORDER BY column_name;
+```
 
     
 
@@ -112,28 +113,26 @@ ORDER BY column_name;
 * Use **DESC** at the end to make it other way
 
 
-  ### **Giving temporary name to a new column**
+### **Giving temporary name to a new column**
 
 
-  **SELECT  (**column\_name1 \+ 10 ) \* 100 **AS** new\_name
-
-  **FROM**  table\_name
-
-
-  ### **Selecting unique entries**
+```sql
+SELECT (column_name1 + 10) * 100 AS new_name
+FROM table_name;
+```
 
 
-  **SELECT  DISTINCT** column\_name1
-
-  **FROM**  table\_name
+### **Selecting unique entries**
 
 
-  
+```sql
+SELECT  DISTINCT column_name1
+FROM table_name
+```
 
+## **WHERE**
 
-  ## **WHERE**
-
-  ### 		**Equations**   \<    \>    \<=    \>=    \=    \!=    \<\>
+### 		**Equations**   \<    \>    \<=    \>=    \=    \!=    \<\>
 
   		
 
