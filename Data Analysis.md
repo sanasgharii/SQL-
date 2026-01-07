@@ -339,47 +339,48 @@ LIMIT 6, 3
 
   * **INNER JOIN** or simply **JOIN** Only keep rows that exist in both tables.  
   * So here in the table below, out of 10 customers, only customer number 2,5,6,7,8 and 10 are shown because they were the only ones that had the same customer id in order table and customers table.  
-    ![][image4]     ![][image5]  
-      
-  * **Tables in same database**
+```sql
+SELECT
+  c.customer_id,
+  c.first_name,
+  o.order_id
+FROM customers c
+JOIN orders o
+  ON c.customer_id = o.customer_id
+ORDER BY c.customer_id;
+```
+Running this query (obviously after matching the table and column names to existing table) will result in an outcome like below:
+<img width="202" height="177" alt="Screenshot 2026-01-07 at 10 47 26 PM" src="https://github.com/user-attachments/assets/2f6ae91d-991f-46f2-b4e7-f6be5fb76042" />
+
+* **Tables in same database**
 
 
-    **customers table**
-
-    **![][image6]**
+	**customers table**
+<img width="520" height="138" alt="Screenshot 2026-01-07 at 10 47 47 PM" src="https://github.com/user-attachments/assets/90ceee3b-b57e-47dc-848a-ba3b821ca480" />
 
     
 
-      **orders  table**
+	**orders  table**
+<img width="520" height="138" alt="Screenshot 2026-01-07 at 10 48 13 PM" src="https://github.com/user-attachments/assets/75c0a704-0bae-4024-8607-22d345149ffe" />
 
-    **![][image7]**
-
-    
 
 * We want orders table but with full customers information rather than just their ID
 ```sql
+SELECT  * 
+FROM  orders
+JOIN customers 
+       ON orders.customer_id = customers.customer_id;
 ```
-  **SELECT**  \* 
-
-  **FROM**  orders
-
-  **JOIN** customers 
-
-         **ON** orders.customer\_id \= customers.customer\_id
-
 
   * If we want to select the primary key column, we have to give a table name before(here can be either **orders.customer\_id** or **customers.customer\_id)**
 
     
 ```sql
+SELECT  order_id, orders.customer_id, first_name, last_name 
+FROM  orders
+JOIN customers 
+       ON orders.customer_id = customers.customer_id;
 ```
-    **SELECT**  order\_id, **orders.customer\_id**, first\_name, last\_name 
-
-    **FROM**  orders
-
-    **JOIN** customers 
-
-           **ON** orders.customer\_id \= customers.customer\_id
 
     
 
@@ -387,18 +388,12 @@ LIMIT 6, 3
 
     
 ```sql
+SELECT  order_id, o.customer_id, first_name, last_name 
+FROM  orders o
+JOIN customers c
+       ON o.customer_id = c.customer_id
 ```
-    **SELECT**  order\_id, o.customer\_id, first\_name, last\_name 
 
-    **FROM**  orders **o**
-
-    **JOIN** customers **c**
-
-           **ON** o.customer\_id \= c.customer\_id
-
-    
-
-    
 
   * **Tables in different databases**  
     
