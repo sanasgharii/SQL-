@@ -2,7 +2,8 @@
 
 * A database is a collection of data stored in a format that can easily be accessed.  
 * In order to manage our databases, we use a software application called database management system(DBMS)  
-* We can connect to DBMS and give instructions for querying and modifying data. Then it will   execute our instructions and send results back to us.    ![][image2]
+* We can connect to DBMS and give instructions for querying and modifying data. Then it will   execute our instructions and send results back to us.    
+<img width="505" height="147" alt="Screenshot 2026-01-07 at 10 42 56 PM" src="https://github.com/user-attachments/assets/6f61a33b-6157-405c-a8cd-26885def84aa" />
 
 ## Different types of DBMS
 
