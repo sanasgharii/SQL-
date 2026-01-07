@@ -465,8 +465,7 @@ JOIN orders_status os
     	* **JOIN…ON…AND…**  
       
 
-**order_items Table **
-
+**Order_item_notes Table**
 
 <img width="390" height="298" alt="Screenshot 2026-01-07 at 10 57 57 PM" src="https://github.com/user-attachments/assets/3758d4b9-70ff-44a1-a3d0-2ba132be5921" />
 
