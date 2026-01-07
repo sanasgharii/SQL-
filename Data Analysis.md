@@ -52,8 +52,7 @@
 
   ## **SELECT** 
 
-
-    ### **Selecting all columns**
+### **Selecting all columns**
 
     
 
@@ -62,8 +61,7 @@ SELECT * FROM table_name
 ```
 
     
-
-    ### **Selecting specific columns**
+### **Selecting specific columns**
 
     
 
@@ -74,7 +72,7 @@ FROM table_name
 
     
 
-    ### **Selecting specific rows** 
+### **Selecting specific rows** 
 
     
 
