@@ -34,21 +34,21 @@
   * Little programs stored in our database for querying data.  
   * For example you can have a stored procedure for getting all the customers in a given city
 
-    
 
-						    **SELECT**
-						
-						    **FROM**
-						
-						    **WHERE**
-						
-						    **GROUP BY**
-						
-						    **HAVING**
-						
-						    **ORDER BY**
-						
-						    **LIMIT**
+
+		**SELECT**
+	
+		**FROM**
+	
+		**WHERE**
+	
+		**GROUP BY**
+	
+		**HAVING**
+	
+		**ORDER BY**
+	
+		**LIMIT**
 
   ## **SELECT** 
 
@@ -58,7 +58,8 @@
     
 
 ```sql
-SELECT  \* FROM**  table\_name
+SELECT  *
+FROM table\_name
 ```
 
     
