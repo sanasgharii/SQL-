@@ -58,8 +58,7 @@
     
 
 ```sql
-SELECT  *
-FROM table\_name
+SELECT * FROM table_name
 ```
 
     
@@ -68,9 +67,10 @@ FROM table\_name
 
     
 
-    **SELECT**  column\_name1, column\_name2, …
-
-    **FROM**  table\_name
+```sql
+SELECT*  column_name1, column_name2, …
+FROM table_name
+```
 
     
 
