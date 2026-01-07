@@ -465,13 +465,13 @@ JOIN orders_status os
     	* **JOIN…ON…AND…**  
       
 
-       		    **order_items Table **
+**order_items Table **
 
 
 <img width="390" height="298" alt="Screenshot 2026-01-07 at 10 57 57 PM" src="https://github.com/user-attachments/assets/3758d4b9-70ff-44a1-a3d0-2ba132be5921" />
 
         
-              	**Order_item_notes Table**
+**Order_item_notes Table**
 
 <img width="230" height="57" alt="Screenshot 2026-01-07 at 10 59 26 PM" src="https://github.com/user-attachments/assets/5e3e06f8-d030-4a01-b558-a9a0c0d539f8" />
 
@@ -497,7 +497,7 @@ JOIN order_item_notes oin
 
   					
 
-		**Employees table**
+**Employees table**
 
 <img width="487" height="343" alt="Screenshot 2026-01-07 at 11 00 22 PM" src="https://github.com/user-attachments/assets/30033c59-a403-47af-bd1e-743d55d3509e" />
 
@@ -512,7 +512,6 @@ JOIN employees m
 ```
 
 Running the code above would result in a table looking like following:
-
 
 <img width="185" height="315" alt="Screenshot 2026-01-07 at 11 03 19 PM" src="https://github.com/user-attachments/assets/b41b3a58-a759-4586-8ccb-8c914e649229" />
 
