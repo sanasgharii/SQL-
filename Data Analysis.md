@@ -89,15 +89,14 @@ WHERE condition
 
     
 
-    ### **Sorting table**
+### **Sorting table**
 
     
 
-    **SELECT**  column\_name1, column\_name2, ….
-
-    **FROM**  table\_name
-
-    **ORDER BY** column\_name
+```sql
+SELECT column_name1, column_name2
+FROM table_name
+ORDER BY column_name;
 
     
 
