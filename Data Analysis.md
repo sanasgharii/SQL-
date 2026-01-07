@@ -114,8 +114,6 @@ ORDER BY column_name;
 
 
 ### **Giving temporary name to a new column**
-
-
 ```sql
 SELECT (column_name1 + 10) * 100 AS new_name
 FROM table_name;
@@ -123,8 +121,6 @@ FROM table_name;
 
 
 ### **Selecting unique entries**
-
-
 ```sql
 SELECT  DISTINCT column_name1
 FROM table_name
@@ -134,67 +130,54 @@ FROM table_name
 
 ### 		**Equations**   \<    \>    \<=    \>=    \=    \!=    \<\>
 
+
+```sql
+SELECT *
+FROM table_name
+WHERE state = 'VA';
+```
+
+```sql
+SELECT *
+FROM table_name
+WHERE unit_price > 3000;
+```
   		
 
-  		**SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **WHERE** state \= “VA”
+###  		**AND, OR, NOT**
 
 
-  
-
-  **SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **WHERE** unit\_price \> 3000
+```sql
+SELECT *
+FROM table_name
+WHERE order_date > '1990-01-01' AND unit_price > 1000;
+```
 
 
-  		
-
-  ###  		**AND, OR, NOT**
-
-
-  		**SELECT**  \* 
-
-  **FROM**  table\_name
-
-  **WHERE** order\_date \> “1990-01-01” **AND** unit\_price \> 1000 
-
-  		
+### 		**IN**  (compare an attribute with a list of values)
+The following is NOT a good approach:
+```sql
+SELECT *
+FROM table_name
+WHERE state = 'VA'
+   OR state = 'GA'
+   OR state = 'FL';
+```
 
 
-  ### 		**IN**  (compare an attribute with a list of values)
+We use IN
+```sql
+SELECT *
+FROM table_name
+WHERE state IN ('VA', 'GA', 'FL');
+```
+Or we can use NOT IN for negation
 
-  	
-
-  			**SELECT**  \*                					
-
-  **FROM**  table\_name 					      → Not a good approach
-
-  **WHERE** state \= “VA”  **OR**   state \= “GA”  **OR** state \= “FL”
-
-
-  We use IN
-
-
-  **SELECT**  \*                					
-
-  **FROM**  table\_name 					         
-
-  **WHERE** state **IN** (“VA”, “GA”, “FL”)
-
-
-  Or we can use NOT IN
-
-
-  **SELECT**  \*                					
-
-  **FROM**  table\_name 					         
-
-  **WHERE** state **NOT IN**  (“VA”, “GA”, “FL”)
+```sql
+SELECT *
+FROM table_name
+WHERE state NOT IN ('VA', 'GA', 'FL');
+```
 
 
   
