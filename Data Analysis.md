@@ -357,11 +357,13 @@ Running this query (obviously after matching the table and column names to exist
 
 
 **customers table**
+
 <img width="520" height="138" alt="Screenshot 2026-01-07 at 10 47 47 PM" src="https://github.com/user-attachments/assets/90ceee3b-b57e-47dc-848a-ba3b821ca480" />
 
     
 
 **orders  table**
+
 <img width="520" height="138" alt="Screenshot 2026-01-07 at 10 48 13 PM" src="https://github.com/user-attachments/assets/75c0a704-0bae-4024-8607-22d345149ffe" />
 
 
@@ -409,17 +411,12 @@ JOIN customers c
 * Match product\_id in both tables across different databases
 
 ```sql
+SELECT  *
+FROM  order_items oi
+JOIN sql_inventory.products p
+       ON oi.product_id = p.product_id;
 ```
-  **SELECT**  \*
 
-  **FROM**  order\_items oi
-
-  **JOIN sql\_inventory.products** p
-
-         **ON** oi.product\_id \= p.product\_id 
-
-
-  
 
   * **Join more than two tables**  
   * **JOIN…ON…**
@@ -428,41 +425,37 @@ JOIN customers c
 
     
 
-    **customers table**
+**customers table**
 
-    **![][image6]**
+<img width="468" height="129" alt="Screenshot 2026-01-07 at 10 53 37 PM" src="https://github.com/user-attachments/assets/71f7a505-a84a-45dd-98f1-b950c1bbfc97" />
 
-    
-
-    **orders  table**
-
-    **![][image7]**
 
     
 
-          **Order\_status**
+**orders  table**
 
-    **![][image8]**
+<img width="474" height="129" alt="Screenshot 2026-01-07 at 10 54 03 PM" src="https://github.com/user-attachments/assets/aefaa27d-c252-49b8-b2f6-42b9dde97645" />
 
-    
 
-    **SELECT**  \*
 
-    **FROM**  orders o
-
-    **JOIN** customer c
-
-           **ON** o.customer\_id \= c.customer\_id
-
-    **JOIN** orders\_status os
-
-           **ON** o.status= os.order\_status\_id
 
     
 
-    
+**Order\_status**
+
+<img width="227" height="74" alt="Screenshot 2026-01-07 at 10 54 25 PM" src="https://github.com/user-attachments/assets/621e9b87-ba40-4f11-8aa3-d993e44683d7" />
+
 
     
+```sql
+SELECT  *
+FROM  orders o
+JOIN customer c
+       ON o.customer_id = c.customer_id
+JOIN orders_status os
+       ON o.status= os.order_status_id
+```
+ 
 
   * **Compound Join Condition**  
   * **Composite KEY** Is a **primary key** that contains more than one column   
