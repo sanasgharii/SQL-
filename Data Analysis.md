@@ -66,7 +66,7 @@ SELECT * FROM table_name
     
 
 ```sql
-SELECT*  column_name1, column_name2, …
+SELECT column_name1, column_name2, …
 FROM table_name
 ```
 
@@ -75,13 +75,11 @@ FROM table_name
 ### **Selecting specific rows** 
 
     
-
-    **SELECT**  column\_name1, column\_name2, …
-
-    **FROM**  table\_name
-
-    **WHERE** condition
-
+```sql
+SELECT column_name1, column_name2, …
+FROM table_name
+WHERE condition
+```
     
 
 * Condition can be  
