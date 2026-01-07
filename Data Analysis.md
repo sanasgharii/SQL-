@@ -458,37 +458,34 @@ JOIN orders_status os
  
 
   * **Compound Join Condition**  
-  * ***Composite KEY** Is a **primary key** that contains more than one column   
-  * Both columns together hold a unique compound that we can use as primary key  
-    * In *order\_items* table, order\_id and product\_id together create a composite key.  
-  * How to join a table that has a composite primary key with another table?  
-    * **JOIN…ON…AND…**  
+  	* Composite KEY** Is a **primary key** that contains more than one column   
+  	* Both columns together hold a unique compound that we can use as primary key  
+    	* In *order\_items* table, order\_id and product\_id together create a composite key.  
+  	* How to join a table that has a composite primary key with another table?  
+    	* **JOIN…ON…AND…**  
       
 
-       		    order\_items 
+       		    **order_items Table **
 
-      ![][image9]
+
+<img width="390" height="298" alt="Screenshot 2026-01-07 at 10 57 57 PM" src="https://github.com/user-attachments/assets/3758d4b9-70ff-44a1-a3d0-2ba132be5921" />
 
         
-              			    		Order\_item\_notes
+              	**Order_item_notes Table**
 
-      ![][image10]
+<img width="230" height="57" alt="Screenshot 2026-01-07 at 10 59 26 PM" src="https://github.com/user-attachments/assets/5e3e06f8-d030-4a01-b558-a9a0c0d539f8" />
+
 
     
-
-      
-
-      **SELECT**  \*  
-      **FROM**  order\_items oi  
-      **JOIN** order\_item\_notes oin
-
-             **ON** oi.order\_id\_id \= oin.order\_id    
-             **AND** oi.product\_id\_id \= oin.product\_id 
-
-  
+```sql
+SELECT  *
+FROM  order_items oi
+JOIN order_item_notes oin
+       ON oi.order_id_id = oin.order_id  
+       AND oi.product_id_id = oin.product_id 
+```
 
 
-      
 
 * ### **SELF JOIN**
 
@@ -500,9 +497,10 @@ JOIN orders_status os
 
   					
 
-  				                              Employees table
+**  				                              Employees table
+**
+<img width="487" height="343" alt="Screenshot 2026-01-07 at 11 00 22 PM" src="https://github.com/user-attachments/assets/30033c59-a403-47af-bd1e-743d55d3509e" />
 
-                          ** ![][image11]**
 
       
 
