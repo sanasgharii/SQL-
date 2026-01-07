@@ -1,5 +1,3 @@
-![High angle view of a large shipping company warehouse with people working. Large shelves and racks in distribution warehouse with vinyl records and employees working][image1]
-
 # What is a database?
 
 * A database is a collection of data stored in a format that can easily be accessed.  
@@ -38,19 +36,19 @@
 
     
 
-    **SELECT**
-
-    **FROM**
-
-    **WHERE**
-
-    **GROUP BY**
-
-    **HAVING**
-
-    **ORDER BY**
-
-    **LIMIT**
+						    **SELECT**
+						
+						    **FROM**
+						
+						    **WHERE**
+						
+						    **GROUP BY**
+						
+						    **HAVING**
+						
+						    **ORDER BY**
+						
+						    **LIMIT**
 
   ## **SELECT** 
 
@@ -59,7 +57,9 @@
 
     
 
-    **SELECT  \* FROM**  table\_name
+```sql
+SELECT  \* FROM**  table\_name
+```
 
     
 
