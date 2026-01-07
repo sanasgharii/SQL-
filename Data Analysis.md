@@ -350,17 +350,18 @@ JOIN orders o
 ORDER BY c.customer_id;
 ```
 Running this query (obviously after matching the table and column names to existing table) will result in an outcome like below:
+
 <img width="202" height="177" alt="Screenshot 2026-01-07 at 10 47 26 PM" src="https://github.com/user-attachments/assets/2f6ae91d-991f-46f2-b4e7-f6be5fb76042" />
 
 * **Tables in same database**
 
 
-	**customers table**
+**customers table**
 <img width="520" height="138" alt="Screenshot 2026-01-07 at 10 47 47 PM" src="https://github.com/user-attachments/assets/90ceee3b-b57e-47dc-848a-ba3b821ca480" />
 
     
 
-	**orders  table**
+**orders  table**
 <img width="520" height="138" alt="Screenshot 2026-01-07 at 10 48 13 PM" src="https://github.com/user-attachments/assets/75c0a704-0bae-4024-8607-22d345149ffe" />
 
 
